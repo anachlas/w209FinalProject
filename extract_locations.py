@@ -1,6 +1,11 @@
+#!/usr/bin/python
 import json
+import datetime
 
-f = open('./data/20160408.export.CSV')
+yesterday = datetime.date.fromordinal(datetime.date.today().toordinal()-1)
+filename = yesterday.strftime('data/%Y%m%d.export.CSV')
+
+f = open(filename)
 
 locations = {}
 
