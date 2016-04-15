@@ -36,7 +36,6 @@ COG Republic of the Congo
 COL Colombia
 CRI Costa Rica
 CUB Cuba
--99 Northern Cyprus
 CYP Cyprus
 CZE Czech Republic
 DEU Germany
@@ -87,7 +86,6 @@ KEN Kenya
 KGZ Kyrgyzstan
 KHM Cambodia
 KOR South Korea
--99 Kosovo
 KWT Kuwait
 LAO Laos
 LBN Lebanon
@@ -143,7 +141,6 @@ SEN Senegal
 SLB Solomon Islands
 SLE Sierra Leone
 SLV El Salvador
--99 Somaliland
 SOM Somalia
 SRB Republic of Serbia
 SUR Suriname
