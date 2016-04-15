@@ -62,5 +62,6 @@ of those sections to manage the look and feel of the site. */
 #mapcontainer {
     position: relative;
     width: 100%;
-    height: 650px
+    height: 650px;
+    background-color: #0077BE;
 }
