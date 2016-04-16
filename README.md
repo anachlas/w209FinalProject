@@ -11,7 +11,7 @@ Final Project for w209 Spring 2016
 
   Copy Repo to computer
   
-  Run grab\_yesterdays\_data.sh - This will download about 10mb zip of GDELT event data and extract to raw file (~100mb)
+  Run grab\_yesterdays\_data.sh (or the OSX version) - This will download about 10mb zip of GDELT event data and extract to raw file (~100mb)
   
   Run extract_locations.py - This will scan over the raw CSV file and extract data for the map viz and save as JSON
   
