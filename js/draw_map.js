@@ -1,4 +1,9 @@
-d3.json("data/20160414.locations.json", function(error, json) {
+var td = new Date();
+td.setDate(td.getDate() -1);
+td = td.toISOString().slice(0,10).replace('-','').replace('-','')
+fileloc = "data/"+td+".locations.json"
+
+d3.json(fileloc, function(error, json) {
     if (error) return console.warn(error);
 
     // Datamaps expect data in format:
