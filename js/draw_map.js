@@ -1,7 +1,7 @@
 var td = new Date();
 td.setDate(td.getDate() -1);
-td = td.toISOString().slice(0,10).replace('-','').replace('-','')
-fileloc = "data/"+td+".locations.json"
+td = td.toISOString().slice(0,10).replace('-','').replace('-','');
+fileloc = "data/"+td+".locations.json";
 
 d3.json(fileloc, function(error, json) {
     if (error) return console.warn(error);
@@ -63,7 +63,7 @@ d3.json(fileloc, function(error, json) {
                 // tooltip content
                 return ['<div class="hoverinfo">',
                     '<strong>', geo.properties.name, '</strong>',
-                    '<br>Count: <strong>', data.numberOfThings, '</strong>',
+                    '<br>Log(#Articles): <strong>', data.numberOfThings, '</strong>',
                     '<br><a href="',data.url1,'">',data.url1,'</a>',
                     '</div>'
                 ].join('');
