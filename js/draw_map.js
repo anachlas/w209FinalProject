@@ -1,4 +1,9 @@
-d3.json("data/20160408.locations.json", function(error, json) {
+var td = new Date();
+td.setDate(td.getDate() -1);
+td = td.toISOString().slice(0,10).replace('-','').replace('-','')
+fileloc = "data/"+td+".locations.json"
+
+d3.json(fileloc, function(error, json) {
     if (error) return console.warn(error);
 
     // Datamaps expect data in format:
@@ -22,11 +27,13 @@ d3.json("data/20160408.locations.json", function(error, json) {
     var dataset = {};
     series.forEach(function(item) { //
         // item example value ["USA", 70]
-        var iso = item[0],
-            value = item[1];
+        var iso = item[0];
+        var value = item[1];
+        var u = item[2];
         dataset[iso] = {
             numberOfThings: value,
-            fillColor: paletteScale(value)
+            fillColor: paletteScale(value),
+            url1: u
         };
     });
     // render map
@@ -57,6 +64,7 @@ d3.json("data/20160408.locations.json", function(error, json) {
                 return ['<div class="hoverinfo">',
                     '<strong>', geo.properties.name, '</strong>',
                     '<br>Count: <strong>', data.numberOfThings, '</strong>',
+                    '<br><a href="',data.url1,'">',data.url1,'</a>',
                     '</div>'
                 ].join('');
             }
