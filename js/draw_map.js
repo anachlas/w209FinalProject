@@ -63,7 +63,7 @@ d3.json(fileloc, function(error, json) {
                 // tooltip content
                 return ['<div class="hoverinfo">',
                     '<strong>', geo.properties.name, '</strong>',
-                    '<br>Count: <strong>', data.numberOfThings, '</strong>',
+                    // '<br>Count: <strong>', data.numberOfThings, '</strong>',
                     '<br><a href="',data.url1,'">',data.url1,'</a>',
                     '</div>'
                 ].join('');
