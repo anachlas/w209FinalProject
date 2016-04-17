@@ -30,7 +30,7 @@ for l in locations.keys():
 
 
 print 'writing JSON'
-with open(yesterday.strftime('data/%Y%m%d.locations.json'), 'w') as fp:
+with open(yesterday.strftime('location_json/%Y%m%d.locations.json'), 'w') as fp:
     json.dump(loc_list, fp)
 
 print 'finished'
