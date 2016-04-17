@@ -3,6 +3,7 @@ import json
 import fileinput
 import base64
 import re
+# https://github.com/grangier/python-goose
 from goose import Goose
 import sys
 reload(sys)
@@ -19,9 +20,13 @@ for line in fileinput.input():
         outfilename = re.sub('split','split.withText', infilename)
         outfile = open(outfilename, "w")
     data = json.loads(line)
-    article = g.extract(url=data["url"])
-    title = base64.b64encode(article.title)
-    text = base64.b64encode(article.cleaned_text)
-    data['title'] = title
-    data['text'] = text
-    outfile.write(json.dumps(data) + '\n')
+    try:
+        article = g.extract(url=data["url"])
+        title = base64.b64encode(article.title)
+        text = base64.b64encode(article.cleaned_text)
+        data['title'] = title
+        data['text'] = text
+        outfile.write(json.dumps(data) + '\n')
+    except Exception, e:
+        print "Error:", str(e)
+        pass
