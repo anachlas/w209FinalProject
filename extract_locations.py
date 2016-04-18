@@ -3,7 +3,7 @@ import json
 import datetime
 import numpy as np
 
-yesterday = datetime.date.fromordinal(datetime.date.today().toordinal()-1)
+yesterday = datetime.date.fromordinal(datetime.date.today().toordinal()-4)
 filename = yesterday.strftime('data/%Y%m%d.export.CSV')
 
 f = open(filename)
@@ -19,10 +19,14 @@ for l in f:
 		continue
 	if loc in locations.keys():
 		count = locations[loc][0]+1
-		v = locations[loc][1]
-		locations[loc] = [count,v]
+		v = list(set(locations[loc][1]))
+		if len(v)>=3:
+			locations[loc] = [count,v]
+		else:
+			v = v + [url]
+			locations[loc] = [count,v]
 	else:
-		locations[loc] = [1,url]
+		locations[loc] = [1,[url]]
 
 loc_list = []
 for l in locations.keys():
