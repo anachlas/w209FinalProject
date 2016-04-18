@@ -33,7 +33,9 @@ d3.json(fileloc, function(error, json) {
         dataset[iso] = {
             numberOfThings: value,
             fillColor: paletteScale(value),
-            url1: u
+            url1: u[0],
+            url2: u[1],
+            url3: u[2]
         };
     });
     // render map
@@ -65,6 +67,8 @@ d3.json(fileloc, function(error, json) {
                     '<strong>', geo.properties.name, '</strong>',
                     // '<br>Count: <strong>', data.numberOfThings, '</strong>',
                     '<br><a href="',data.url1,'">',data.url1,'</a>',
+                    '<br><a href="',data.url2,'">',data.url2,'</a>',
+                    '<br><a href="',data.url3,'">',data.url3,'</a>',
                     '</div>'
                 ].join('');
             }
