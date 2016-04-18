@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Yesterday's News around the World</title>
+    <title>Yesterday's News Today</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -57,10 +57,10 @@
                     <li>
                         <a class="page-scroll" href="#about">Yesterday's News</a>
                     </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
                     <li>
+                        <a class="page-scroll" href="#services">Connections</a>
+                    </li>
+                    <!-- <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li> -->
                 </ul>
@@ -97,15 +97,12 @@
         </div>
     </section>
 
-    <!-- Services Section
+    <!-- Services Section -->
     <section id="services" class="services-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Services Section</h1>
-                </div>
-            </div>
-        </div>
+                  <img src="graph_legend.png">
+                    <div id="entity_graph" file="graph_data/test_graph.json"></div>
+                    <script src="http://d3js.org/d3.v3.min.js"></script>
+                    <script src="js/draw_graph.js"></script>
     </section>
 
     <!-- Contact Section

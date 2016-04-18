@@ -65,3 +65,13 @@ of those sections to manage the look and feel of the site. */
     height: 650px;
     background-color: #0077BE;
 }
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
