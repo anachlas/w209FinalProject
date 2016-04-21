@@ -3,7 +3,7 @@ import json
 import datetime
 import numpy as np
 
-yesterday = datetime.date.fromordinal(datetime.date.today().toordinal()-4)
+yesterday = datetime.date.fromordinal(datetime.date.today().toordinal()-1)
 filename = yesterday.strftime('data/%Y%m%d.export.CSV')
 
 f = open(filename)
