@@ -1,5 +1,5 @@
 var td = new Date();
-td.setDate(td.getDate() -1);
+td.setDate(td.getDate() -2);
 td = td.toISOString().slice(0,10).replace('-','').replace('-','')
 fileloc = "location_json/"+td+".locations.json"
 
