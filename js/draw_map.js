@@ -1,7 +1,7 @@
-var td = new Date();
-td.setDate(td.getDate() -2);
-td = td.toISOString().slice(0,10).replace('-','').replace('-','')
-fileloc = "location_json/"+td+".locations.json"
+// var td = new Date();
+// td.setDate(td.getDate() -2);
+// td = td.toISOString().slice(0,10).replace('-','').replace('-','')
+fileloc = "location_json/"+"20160504"+".locations.json"
 
 d3.json(fileloc, function(error, json) {
     if (error) return console.warn(error);
